@@ -1,0 +1,49 @@
+$header-height: 55px;
+$footer-height: 150px;
+
+.header {
+  border-bottom: 1px solid $border-color;
+  min-height: $header-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 1;
+}
+
+.header-nav {
+  color: $color-primary;
+  padding: 5px 0 5px 20px;
+  max-width: $layout-max-width;
+  margin: 0 auto;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+
+  &__heading {
+    font-family: system-ui;
+    max-width: 55px;
+    font-size: 13px;
+    line-height: 0.9;
+    color: $color-primary;
+  }
+  &__icon {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.main {
+  margin: 0 auto;
+  max-width: $layout-max-width;
+  padding: $header-height 20px;
+  min-height: calc(100vh - (#{$header-height} * 2) - #{$footer-height});
+}
+
+.footer {
+  height: $footer-height;
+  background-color: #193252;
+}

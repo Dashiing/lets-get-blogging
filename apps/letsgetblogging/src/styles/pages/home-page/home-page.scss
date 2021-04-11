@@ -1,0 +1,37 @@
+$background-image-height-mobile: 225px;
+$background-image-height-desktop: 390px;
+
+.home-page-background-image-wrapper {
+  height: $background-image-height-mobile;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    height: $background-image-height-desktop;
+  }
+}
+
+.home-page-background-image {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  object-fit: cover;
+  height: $background-image-height-mobile;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    height: $background-image-height-desktop;
+  }
+}
+
+.home-page-post-list {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__item {
+    list-style: none;
+  }
+}

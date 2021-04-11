@@ -1,0 +1,16 @@
+<div class="home-page-background-image-wrapper">
+  <img
+    srcset="assets/768-1x.webp 768w, assets/1440-1x.webp 1440w"
+    sizes="(max-width: 768px) 768px, 1440px"
+    src="assets/1440-1x.webp"
+    class="home-page-background-image"
+    alt="Woman checking test kit"
+    loading="lazy"
+  />
+</div>
+<ul class="home-page-post-list">
+  <li class="home-page-post-list__item" *ngFor="let post of posts$ | async">
+    <lgc-post-card [post]="post"></lgc-post-card>
+  </li>
+  <div class="error" *ngIf="getPostsError">{{ getPostsError }}</div>
+</ul>

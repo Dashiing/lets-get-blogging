@@ -1,0 +1,30 @@
+<ng-container *ngIf="post$ | async as post">
+  <h1 class="post-page__h1">{{ post.title }}</h1>
+  <time [attr.datetime]="post?.publish_date">
+    {{ post.publish_date }}
+  </time>
+  <h2>
+    <span class="post-page__author-label">By: </span>
+    {{ post.author }}
+  </h2>
+  <div [innerHtml]="post.content"></div>
+</ng-container>
+<div class="error" *ngIf="getPostError">{{ getPostError }}</div>
+<div class="post-page__comments-wrapper">
+  <h3 class="post-page__comments-heading">{{ comments.length }} comments</h3>
+  <lgb-new-post-comment
+    (create)="createNewPostComment($event)"
+  ></lgb-new-post-comment>
+  <div class="error" *ngIf="createCommentError">{{ createCommentError }}</div>
+  <ul>
+    <li *ngFor="let comment of comments; trackBy: trackById">
+      <lgc-post-comment [comment]="comment"></lgc-post-comment>
+    </li>
+  </ul>
+  <div *ngIf="getCommentsError" class="error">
+    {{ getCommentsError }}
+  </div>
+  <div *ngIf="comments.length === 0" class="post-page__no-comments">
+    Be the first to comment.
+  </div>
+</div>

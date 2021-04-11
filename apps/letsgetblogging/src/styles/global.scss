@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  color: $text-color-primary;
+  font-family: 'Segoe UI';
+  background-color: #f7f9fd;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color-primary;
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+  color: $text-color-primary;
+}
+
+h2 {
+  color: $text-color-secondary;
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 0;
+}
+
+h3 {
+  color: $text-color-secondary;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+time {
+  color: $text-color-primary;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+input {
+  border-width: 1px;
+  box-sizing: border-box;
+}
+
+textarea {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border-style: solid;
+  cursor: pointer;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.ng-invalid.ng-touched {
+  border-color: $color-error;
+}
+
+.error {
+  color: $color-error;
+  font-size: 13px;
+}
+
+.button-primary {
+  background-color: $button-color-primary;
+  border-color: $button-color-primary;
+  color: #fff;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+
+  &:hover {
+    background-color: #fff;
+    color: $button-color-primary;
+  }
+}

@@ -1,0 +1,30 @@
+<form [formGroup]="newCommentForm" (ngSubmit)="onSubmit()">
+  <textarea
+    class="new-post-comment-content"
+    placeholder="Join the discussion..."
+    type="text"
+    formControlName="content"
+    required
+    rows="3"
+  ></textarea>
+  <div
+    class="error"
+    *ngIf="contentControl.touched && contentControl.errors?.required"
+  >
+    Content is required
+  </div>
+  <input
+    class="new-post-comment-user"
+    placeholder="Name"
+    type="text"
+    formControlName="user"
+    required
+  />
+  <div
+    class="error"
+    *ngIf="userControl.touched && userControl.errors?.required"
+  >
+    User name is required
+  </div>
+  <button class="new-post-comment-button button-primary" type="submit">Submit</button>
+</form>

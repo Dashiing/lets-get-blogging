@@ -1,0 +1,14 @@
+.post-comment {
+  display: block;
+  margin-top: 20px;
+
+  &__how-long {
+    color: $text-color-secondary;
+    font-size: small;
+  }
+
+  &__user {
+    color: $text-color-primary;
+    font-weight: 500;
+  }
+}

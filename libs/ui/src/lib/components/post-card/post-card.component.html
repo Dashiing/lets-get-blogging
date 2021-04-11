@@ -1,0 +1,22 @@
+<article class="post-card">
+  <a
+    class="post-card__link"
+    [routerLink]="['/posts', post?.slug]"
+    [state]="{ id: post?.id }"
+  >
+    <h2 class="post-card__title">{{ post?.title }}</h2>
+    <div class="post-card__description">{{ post?.description }}</div>
+    <footer class="post-card-footer">
+      <p>
+        By {{ post?.author }}
+        on
+        <time
+          class="post-card-footer__time"
+          [attr.datetime]="post?.publish_date"
+        >
+          {{ post?.publish_date }}
+        </time>
+      </p>
+    </footer>
+  </a>
+</article>

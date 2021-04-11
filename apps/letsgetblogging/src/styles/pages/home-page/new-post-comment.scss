@@ -1,0 +1,19 @@
+.new-post-comment-content {
+  width: 100%;
+  resize: none;
+}
+
+.new-post-comment-user {
+  width: 100%;
+}
+
+.new-post-comment-button {
+  width: 100%;
+  margin-top: 10px;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    $button-width: 150px;
+    width: $button-width;
+    margin-left: calc(100% - #{$button-width});
+  }
+}

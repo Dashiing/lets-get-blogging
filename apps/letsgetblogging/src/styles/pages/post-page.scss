@@ -1,0 +1,39 @@
+.post-page {
+  display: block;
+  margin: 0 auto;
+
+  &__h1 {
+    position: relative;
+    padding-bottom: 12px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 0;
+      width: 40px;
+      border-bottom: 1px solid $color-primary;
+    }
+  }
+
+  &__author-label {
+    color: $text-color-primary;
+    font-weight: 500;
+  }
+
+  &__comments-wrapper {
+    padding-top: 1px;
+  }
+
+  &__comments-heading {
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__no-comments {
+    text-align: center;
+    color: $text-color-secondary;
+    font-weight: 100;
+    margin-top: 15px;
+  }
+}
